@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+header{
+    height: 5rem;
+    width: 100vw;
+    background:#000000;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+header>div>div>button>i {
+    padding: 5px 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+    
+}
+
+.search-container {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 200px;
+    background: #1a0606;
+    border: 1px solid rgb(176, 10, 10);
+}
+
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: bottom;
+    background-size: cover;
+    background: rgb(0, 0, 0);
+    height: 10rem;
+    width: 70;
+    page:small;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ruimte vanaf de bovenkant */
+}
+
+.button-container button {
+    margin: 0 10px; /* Ruimte tussen de knoppen */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-container {
+    margin-left: 15rem /* Ruimte vanaf de linkerkant */
+}
+
+button{
+  /* Apply the same style to all buttons */
+
+    color: white; /* Text color */
+    background: rgb(176, 10, 10); /* Background color */
+    padding: 10px 20px; /* Padding for better appearance */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    
+}
+button:active {
+    background-color: rgb(84, 31, 31); /* Change background color when button is clicked */
+
+}
+
+i{
+    color: white;
+}
