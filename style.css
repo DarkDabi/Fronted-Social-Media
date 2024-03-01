@@ -87,6 +87,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 20px; /* Ruimte vanaf de bovenkant */
+    margin-left: 2rem; /* Ruimte vanaf de linkerkant, enige aanpassing kan nodig zijn */
 }
 
 .button-container button {
@@ -96,10 +97,14 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background: rgb(176, 10, 10);
 }
-.button-container {
-    margin-left: 15rem /* Ruimte vanaf de linkerkant */
+
+.button-container button:hover {
+    background-color: #45a049;
 }
+
+
 
 button{
   /* Apply the same style to all buttons */
@@ -120,3 +125,107 @@ button:active {
 i{
     color: white;
 }
+.Border-List {
+    position: fixed;
+    left: 0;
+    bottom: 6;
+    width: 15rem;
+    height: 70rem; /* Hoogte van 30rem (of een andere waarde naar keuze) */
+    overflow-y: auto; /* Voeg een scroll toe als de inhoud groter is dan de containerhoogte */
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: red;
+    z-index: 2028;
+    padding: 4px;
+}
+
+    
+    .Border-List>li{
+        font-family: "Open Sans", sans-serif;
+        font-size: 2rem;
+        
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Ruimte vanaf de bovenkant */
+        margin-left: 2rem; /* Ruimte vanaf de linkerkant, enige aanpassing kan nodig zijn */
+    }
+    
+    .button-container button {
+        margin: 0 10px; /* Ruimte tussen de knoppen */
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: rgb(176, 10, 10);
+    }
+    
+    .button-container button:hover {
+        background-color: #45a049;
+    }
+    
+    
+    .button2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Hiermee worden de knoppen naar een nieuwe rij verplaatst als ze niet in de container passen */
+    }
+    
+    .button2 button {
+    flex: 1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    background: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left; /* Tekst naar links uitlijnen */
+    margin: 5px; /* Ruimte tussen de knoppen toevoegen */
+}
+    
+    .button2 button:active {
+        background-color: rgb(63, 31, 31);
+    }
+
+    .Border-List p {
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.3rem;
+        text-align: left; /* Tekst naar links uitlijnen */
+        margin-top: 5px; /* Ruimte boven de paragrafen toevoegen */
+    }
+    
+    .Border-List h1 {
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.3rem;
+        text-align: left; /* Tekst naar links uitlijnen */
+        margin-top: 5px; /* Ruimte boven de h1 toevoegen */
+        margin-left: 2rem; /* Ruimte aan de linkerkant van de h1 toevoegen */
+    }
+/* Stijl voor de scrollbalk */
+.Border-List::-webkit-scrollbar {
+    width: 12px; /* Breedte van de scrollbalk */
+}
+
+/* Track (het gebied waar de scrollbar zich bevindt) */
+.Border-List::-webkit-scrollbar-track {
+    background: #000000; /* Kleur van de track */
+}
+
+/* Handle (het beweegbare deel van de scrollbar) */
+.Border-List::-webkit-scrollbar-thumb {
+    background: #888; /* Kleur van de handle */
+    border-radius: 10px; /* Afgeronde hoeken van de handle */
+}
+
+/* Handle bij hover */
+.Border-List::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Kleur van de handle bij hover */
+}
+    
+    
