@@ -1,12 +1,30 @@
-html,
-body
-	margin: 0
-	padding: 0
-	width: 100%
-	height: 100%
 
-$bg-color: #000000
-$base-color: #e40913
+/* intro.css */
+/* Add your intro styles here */
+.intro-content {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 3s forwards; /* Adjust animation duration as per your requirement */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+$bg-color: #000000;
+$base-color: #e40913;
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
 
 #container
 	display: flex
@@ -25,7 +43,7 @@ $base-color: #e40913
 		height: 300px
 		overflow: hidden
 		animation-name: zoom-in
-		animation-delay: .5s
+		animation-delay: 0.5s
 		animation-duration: 3.5s
 		animation-timing-function: ease-in
 		animation-fill-mode: forwards
