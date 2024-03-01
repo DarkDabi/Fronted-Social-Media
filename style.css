@@ -32,9 +32,21 @@ header{
     align-items: center;
 }
 
-h1 {
-    margin: 0;
+img {
+    height: 50px; /* Hoogte van de afbeelding, aanpassen naar wens */
+    width: auto; /* Hierdoor wordt de breedte automatisch aangepast aan de hoogte */
+    margin-right: 20px; /* Ruimte toevoegen aan de rechterkant van de afbeelding */
 }
+
+header .container img {
+    margin-right: auto; /* Zorgt ervoor dat het logo naar links wordt uitgelijnd */
+    margin-left: -60rem; /* Reset eventuele standaard marges */
+    margin-top: 20px;
+}
+.logo {
+    margin:0;
+}
+
 header>div>div>button>i {
     padding: 5px 5px;
     color: white;
@@ -128,9 +140,9 @@ i{
 .Border-List {
     position: fixed;
     left: 0;
-    bottom: 6;
+    bottom: 1;
     width: 15rem;
-    height: 70rem; /* Hoogte van 30rem (of een andere waarde naar keuze) */
+    height: 65rem; /* Hoogte van 30rem (of een andere waarde naar keuze) */
     overflow-y: auto; /* Voeg een scroll toe als de inhoud groter is dan de containerhoogte */
     box-sizing: border-box;
     display: inline-block;
@@ -203,9 +215,10 @@ i{
         color: white;
         font-family: "Open Sans", sans-serif;
         font-size: 1.3rem;
-        text-align: left; /* Tekst naar links uitlijnen */
+        text-align: left !important; /* Tekst naar links uitlijnen */
         margin-top: 5px; /* Ruimte boven de h1 toevoegen */
-        margin-left: 2rem; /* Ruimte aan de linkerkant van de h1 toevoegen */
+        margin-left: 0rem; /* Ruimte aan de linkerkant van de h1 toevoegen */
+     
     }
 /* Stijl voor de scrollbalk */
 .Border-List::-webkit-scrollbar {
@@ -219,13 +232,13 @@ i{
 
 /* Handle (het beweegbare deel van de scrollbar) */
 .Border-List::-webkit-scrollbar-thumb {
-    background: #888; /* Kleur van de handle */
+    background: #4a2525; /* Kleur van de handle */
     border-radius: 10px; /* Afgeronde hoeken van de handle */
 }
 
 /* Handle bij hover */
 .Border-List::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Kleur van de handle bij hover */
+    background: #6d2b2b; /* Kleur van de handle bij hover */
 }
     
     
