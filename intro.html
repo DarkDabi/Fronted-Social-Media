@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/intro.css">    
-  <title>intro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+    <link rel="stylesheet" href="/intro.css">
+    <style>
+        #loading-video {
+            display: none; /* Verberg de laadvideo */
+        }
+    </style>
+    <script>
+       // Wachten tot de introductievideo is afgelopen
+       document.addEventListener('DOMContentLoaded', function() {
+            var introVideo = document.getElementById('intro-video');
+            var loadingVideo = document.getElementById('loading-video');
+            var overlay = document.getElementById('overlay');
+            introVideo.addEventListener('ended', function() {
+                // Video is afgelopen, instellen dat de introductie is afgespeeld
+                document.cookie = "introPlayed=true; path=/";
+                // Verberg de introductievideo
+                introVideo.style.display = 'none';
+                // Toon de overlay met de laadanimatie
+                overlay.style.display = 'block';
+                // Speel de laadvideo af
+                loadingVideo.style.display = 'block'; // Maak de laadvideo zichtbaar
+                loadingVideo.play();
+            });
+            loadingVideo.addEventListener('ended', function() {
+                // Laadvideo is afgelopen, doorsturen naar index.html
+                window.location.href = 'index.html';
+            });
+            introVideo.addEventListener('play', function() {
+                // Verwijder de introPlayed cookie wanneer de video opnieuw wordt afgespeeld
+                document.cookie = "introPlayed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            });
+        });
+    </script>
 </head>
 <body>
-  <div class="txt contenteditable">
-    .txt contenteditable:"true"
-  | NETYUBE
-  </div>
+    <video id="intro-video" autoplay muted>
+        <source src="/videos/Netflix Logo 2023.mp4" type="video/mp4">
+    </video>
+
+    <!-- Laadvideo -->
+    <video id="loading-video" muted>
+        <source src="/videos/YouTube Style Loading Animation.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay" id="overlay">
+        <div class="loader"></div>
+    </div>
+
 </body>
 </html>

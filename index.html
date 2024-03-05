@@ -12,8 +12,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anta&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="fontawesome.js"></script>
+    <link rel="java" href="/main.js">
 
+    <script>
+        // Controleren of de introductie al is afgespeeld
+        var introPlayed = document.cookie.replace(/(?:(?:^|.*;\s*)introPlayed\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 
+        if (!introPlayed) {
+            // Als introductie niet is afgespeeld, doorsturen naar intro.html
+            window.location.href = 'intro.html';
+        }
+    </script>
     
 <body>
     <header>
@@ -74,5 +83,11 @@
         </div>
     </div>
     
+
+    <div id="video-container">
+        <img src="/afbeeldingen/titans.jpg" alt="Your Image">
+        <video>
+            <source src="path_to_your_video.mp4" type="video/mp4">
+            
 </body>
 </html>
