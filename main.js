@@ -1,21 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var container = document.getElementById('video-container');
-    var image = container.querySelector('img');
-    var video = container.querySelector('video');
+var image = document.getElementById('image1');
+var video = document.getElementById('video1');
+var videoContainer = document.getElementById('videoContainer');
+var mouseOverImage = false;
 
-    // Wanneer de muis over het element beweegt, speel de video af
-    container.addEventListener('mouseenter', function() {
-        image.style.display = 'none';
-        video.style.display = 'block';
-        video.play();
-    });
+video.style.display = 'none'; // Initially hide the video
 
-    // Wanneer de muis het element verlaat, stop de video en toon de afbeelding
-    container.addEventListener('mouseleave', function() {
-        video.pause();
-        video.currentTime = 0;
-        image.style.display = 'block';
-        video.style.display = 'none';
-    });
+videoContainer.addEventListener('mouseenter', function() {
+    mouseOverImage = true;
+    setTimeout(function() {
+        if (mouseOverImage) {
+            image.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        }
+    }, 1000);
 });
 
+videoContainer.addEventListener('mouseleave', function() {
+    mouseOverImage = false;
+    video.pause();
+    video.currentTime = 0;
+    image.style.display = 'block';
+    video.style.display = 'none';
+});
