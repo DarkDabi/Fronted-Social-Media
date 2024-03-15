@@ -198,7 +198,7 @@ i{
 }
     
     .button2 button:active {
-        background-color: rgb(23, 7, 7);
+        background-color: rgb(63, 31, 31);
     }
 
     .Border-List p {
@@ -239,11 +239,6 @@ i{
     background: #6d2b2b; /* Kleur van de handle bij hover */
 }
 
-#video-container {
-    width: 800px;
-    height: 450px;
-    position: relative;
-}
 
 #video-container img,
 #video-container video {
