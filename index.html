@@ -82,11 +82,98 @@
                  <br>
         </div>
     </div>
-    
-         <div id="dataContainer"></div>
+    <style>
+        /* Voeg hier je CSS-stijlen toe */
+        .video {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+        }
+        .video img {
+            max-width: 100%;
+            height: auto;
+        }
+        .video h2 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .video p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="dataContainer">
+        <!-- Hier worden de video's ingevoegd -->
+    </div>
+
+    <script>
+        // JavaScript code om de JSON-gegevens op te halen en weer te geven
+        class Video {
+            constructor(title, image, time, username) {
+                this.title = title;
+                this.image = image;
+                this.time = time;
+                this.username = username;
+            }
+        }
+
+        fetch("./MOCK_DATA.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                data.forEach(videoData => {
+                    let video = new Video(videoData.title, videoData.image, videoData.time, videoData.username);
+
+                    let videoElement = document.createElement('div');
+                    videoElement.classList.add('video');
+                    videoElement.innerHTML = `
+                        <img src="${video.image}" alt="${video.title}">
+                        <h2>${video.title}</h2>
+                        <p>Time: ${video.time}</p>
+                        <p>Username: ${video.username}</p>
+                    `;
+                    document.getElementById('dataContainer').appendChild(videoElement);
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+<div id="popup">
+    <h2 id="popup-title"></h2>
+    <button id="play-button">Play</button>
+    <button id="comments-button">Comments</button>
+</div>
+
+<!-- Voorbeeldfilmkoppelingen -->
+<a href="https://ww2.123moviesfree.net/movie/the-great-gatsby-3036/" class="movie-link" data-movie="The Great Gatsby">The Great Gatsby</a>
+<a href="https://ww2.123moviesfree.net/season/the-seven-deadly-sins-season-1-11828/" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="https://www.imdb.com/title/tt0064975/" class="movie-link" data-movie="Double Suicide (Shinjû: Ten no amijima)">Double Suicide (Shinjû: Ten no amijima)</a>
+<a href="https://ww1.m4uhd.tv/watch-movie-good-morning-babylon-1987-246756.html" class="movie-link" data-movie="Good Morning, Babylon">Good Morning, Babylon</a>
+<a href="https://www.moviefone.com/movie/illuminata/6411/where-to-watch/" class="movie-link" data-movie="Illuminata">Illuminata</a>
+<a href="https://ww1.m4uhd.tv/watch-movie-real-genius-1985-3480.html" class="movie-link" data-movie="Real Genius">Real Genius</a>
+<a href="https://www.moviefone.com/movie/boys-and-girls/5906/where-to-watch/" class="movie-link" data-movie="Boys and Girls">Boys and Girls</a>
+<a href="https://ww1.m4uhd.tv/watch-movie-wish-2023-281109.html" class="movie-link" data-movie="Wish">Wish</a>
+<a href="https://www.moviefone.com/movie/a-boy-and-his-dog/1004316/main/" class="movie-link" data-movie="Boy and His Dog, A">Boy and His Dog, A"</a>
+<a href="https://ww1.m4uhd.tv/watch-movie-the-heavy-2010-21837.html" class="movie-link" data-movie="Heavy">Heavy</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+<a href="#" class="movie-link" data-movie="The Seven Deadly Sin">The Seven Deadly Sin</a>
+
+
              
                 
-             
-            
+</head>      
 </body>
 </html>

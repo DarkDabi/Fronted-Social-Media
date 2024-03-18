@@ -261,5 +261,44 @@ i{
     height:50%;
 }
 #video {
-    display: none;
+    display:none;
 }
+
+.video {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+}
+.video img {
+    max-width: 100%;
+    height: auto;
+}
+.video h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.video p {
+    margin: 0;
+}
+ #dataContainer{
+    margin-left: auto;
+    width: 5rem;
+    height:5rem;
+    color:aqua;
+    
+
+ }
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 9999;
+  }
