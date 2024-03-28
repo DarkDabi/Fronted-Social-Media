@@ -282,23 +282,16 @@ i{
     margin: 0;
 }
  #dataContainer{
-    margin-left: auto;
+    margin-left: 5rem;
     width: 5rem;
     height:5rem;
     color:aqua;
-    
 
+ }
+ div>video{
+    margin-right: 5rem;
  }
 
 #popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    z-index: 9999;
+   margin:1 rem;
   }
